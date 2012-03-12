@@ -1,2 +1,5 @@
-This is a rails application. Its purpose is to demo the gem rails-simple-search.
+This is a rails application. Its purpose is to demo the simplicity and power of gem rails-simple-search.
+
+You can download it and run "bundle; rails s" immediately. It's tested under Ruby 1.9.2 and Rails 3.0.6.
+
 For more info about rails-simple-search, please see "https://github.com/yzhanginwa/rails-simple-search".
