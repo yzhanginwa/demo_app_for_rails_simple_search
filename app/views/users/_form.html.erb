@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :address_id %><br />
-    <%= f.text_field :address_id %>
+    <%= f.select :address_id, Address.all.map{|a| [a.full_address, a.id]} %>
   </div>
   <div class="actions">
     <%= f.submit %>

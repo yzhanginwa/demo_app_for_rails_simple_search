@@ -1,4 +1,6 @@
 DemoAppForRailsSimpleSearch::Application.routes.draw do
+  match '/users/index', :controller => 'users', :action => "index"
+
   resources :comments
 
   resources :posts

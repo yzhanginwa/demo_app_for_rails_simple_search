@@ -27,3 +27,30 @@
 <br />
 
 <%= link_to 'New User', new_user_path %>
+
+<hr/>
+<h2>rails-simple-search</h2>
+<%= form_for @search, :url => "/users/index" do |f| %>
+  <%= f.label "First Name" %> 
+  <%= f.text_field 'first_name' %> 
+  <br/>
+  <%= f.label "Last Name" %> 
+  <%= f.text_field 'last_name' %> 
+  <br/>
+  <%= f.label "Address1" %> 
+  <%= f.text_field 'address.address1' %> 
+  <br/>
+  <%= f.label "City" %> 
+  <%= f.text_field 'address.city' %> 
+  <br/>
+  <%= f.label "Post title" %> 
+  <%= f.text_field 'posts.title' %> 
+  <br/>
+  <%= f.label "Post body" %> 
+  <%= f.text_field 'posts.body' %> 
+  <br/>
+  <%= f.label "Comment" %> 
+  <%= f.text_field 'comments.body' %> 
+  <br/>
+  <%= f.submit "search" %>
+<% end %>
