@@ -53,7 +53,7 @@ GEM
       activesupport (= 3.0.6)
       bundler (~> 1.0)
       railties (= 3.0.6)
-    rails-simple-search (0.9.0)
+    rails-simple-search (0.9.2)
     railties (3.0.6)
       actionpack (= 3.0.6)
       activesupport (= 3.0.6)
@@ -72,5 +72,5 @@ PLATFORMS
 
 DEPENDENCIES
   rails (= 3.0.6)
-  rails-simple-search
+  rails-simple-search (>= 0.9.2)
   sqlite3

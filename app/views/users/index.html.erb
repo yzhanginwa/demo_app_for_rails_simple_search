@@ -25,6 +25,10 @@
 </table>
 
 <br />
+  <% if @search.pages > 1 %>
+    <p>There are <%= @search.pages %> pages in total </p>
+  <% end %>
+<br />
 
 <%= link_to 'New User', new_user_path %>
 
@@ -51,6 +55,9 @@
   <br/>
   <%= f.label "Comment" %> 
   <%= f.text_field 'comments.body' %> 
+  <br/>
+  <%= f.label "Page" %> 
+  <%= f.select 'page', @search.pages_for_select  %> 
   <br/>
   <%= f.submit "search" %>
 <% end %>

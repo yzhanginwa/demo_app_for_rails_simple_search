@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
-    @search = Search.new(:user, params[:search])
+    @search = Search.new(:user, params[:search], :per_page => 2)
+    @search.order = 'last_name'
     @users = @search.run
 
     respond_to do |format|

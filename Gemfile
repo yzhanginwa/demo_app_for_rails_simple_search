@@ -6,7 +6,7 @@ gem 'rails', '3.0.6'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'rails-simple-search' 
+gem 'rails-simple-search' , ">=0.9.2"
 
 # Use unicorn as the web server
 # gem 'unicorn'

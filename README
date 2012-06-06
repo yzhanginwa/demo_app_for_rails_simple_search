@@ -25,7 +25,8 @@ The following is the code related to the search:
 3. In file "app/controllers/users_controllers"
 
   ...
-  @search = Search.new(:user, params[:search])
+  @search = Search.new(:user, params[:search], :per_page => 2)
+  @search.order = 'last_name'
   @users = @search.run
   ...
  
