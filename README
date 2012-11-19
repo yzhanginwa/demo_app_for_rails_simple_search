@@ -1,6 +1,6 @@
 This is a rails application. Its purpose is to demo the simplicity and power of gem rails-simple-search.
 
-You can download it and run "bundle; rails s" immediately. It's tested under Ruby 1.9.3-p194 and Rails 3.2.6.
+You can download it and run "bundle; rake db:migrate; rails s" immediately. It's tested under Ruby 1.9.3-p194 and Rails 3.2.6.
 
 In thie demo, I tried to search for a user by part of her name, her post titles, her comments, her address, her city, her state and so on.
 

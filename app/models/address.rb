@@ -1,4 +1,6 @@
 class Address < ActiveRecord::Base
+  attr_accessible :address1, :address2, :city, :state, :zip
+
   has_one :user
 
   def full_address
