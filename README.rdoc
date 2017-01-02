@@ -11,7 +11,7 @@ The following is the code related to the search:
 1. In file "Gemfile"
 
   ...
-  gem 'rails-simple-search'  # to use 1.1.0 or above
+  gem 'rails-simple-search'  # to use 1.1.1 or above
   ...
 
 2. In file "app/model"Search"
@@ -27,9 +27,8 @@ The following is the code related to the search:
 3. In file "app/controllers/users_controllers"
 
   ...
-  @search = Search.new(:user, params[:search], :per_page => 2)
-  @search.order = 'last_name'
-  @users = @search.run
+  @search = Search.new(:user, params[:search], exact_match: :first_name)
+  @users = @search.run.paginate(page: params[:page], per_page: 20).order(:first_name)
   ...
  
 4. In file "app/views/users/index.html.erb"
