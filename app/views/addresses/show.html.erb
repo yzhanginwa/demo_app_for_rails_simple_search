@@ -1,30 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Address1:</b>
+  <strong>Address1:</strong>
   <%= @address.address1 %>
 </p>
 
 <p>
-  <b>Address2:</b>
+  <strong>Address2:</strong>
   <%= @address.address2 %>
 </p>
 
 <p>
-  <b>City:</b>
+  <strong>City:</strong>
   <%= @address.city %>
 </p>
 
 <p>
-  <b>State:</b>
+  <strong>State:</strong>
   <%= @address.state %>
 </p>
 
 <p>
-  <b>Zip:</b>
+  <strong>Zip:</strong>
   <%= @address.zip %>
 </p>
-
 
 <%= link_to 'Edit', edit_address_path(@address) %> |
 <%= link_to 'Back', addresses_path %>

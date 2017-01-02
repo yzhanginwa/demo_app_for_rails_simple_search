@@ -1,63 +1,64 @@
-<h1>Listing users</h1>
-
-<table>
-  <tr>
-    <th>Email</th>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Address</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.email %></td>
-    <td><%= user.first_name %></td>
-    <td><%= user.last_name %></td>
-    <td><%= user.address_id %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-  <% if @search.pages > 1 %>
-    <p>There are <%= @search.pages %> pages in total </p>
-  <% end %>
-<br />
-
-<%= link_to 'New User', new_user_path %>
-
-<hr/>
 <h2>rails-simple-search</h2>
 <%= form_for @search, :url => "/users/index" do |f| %>
-  <%= f.label "First Name" %> 
-  <%= f.text_field 'first_name' %> 
+  <%= f.label "First Name" %>
+  <%= f.text_field 'first_name' %>
   <br/>
-  <%= f.label "Last Name" %> 
-  <%= f.text_field 'last_name' %> 
+  <%= f.label "Last Name" %>
+  <%= f.text_field 'last_name' %>
   <br/>
-  <%= f.label "Address1" %> 
-  <%= f.text_field 'address.address1' %> 
+  <%= f.label "Address1" %>
+  <%= f.text_field 'address.address1' %>
   <br/>
-  <%= f.label "City" %> 
-  <%= f.text_field 'address.city' %> 
+  <%= f.label "City" %>
+  <%= f.text_field 'address.city' %>
   <br/>
-  <%= f.label "Post title" %> 
-  <%= f.text_field 'posts.title' %> 
+  <%= f.label "Post title or body" %>
+  <%= f.text_field 'posts.title_or_posts.body' %>
   <br/>
-  <%= f.label "Post body" %> 
-  <%= f.text_field 'posts.body' %> 
+  <%= f.label "Post body" %>
+  <%= f.text_field 'posts.body' %>
   <br/>
-  <%= f.label "Comment" %> 
-  <%= f.text_field 'comments.body' %> 
+  <%= f.label "Comment" %>
+  <%= f.text_field 'comments.body' %>
   <br/>
-  <%= f.label "Page" %> 
-  <%= f.select 'page', @search.pages_for_select  %> 
+  <%= f.label "Page" %>
+  <%= f.select 'page', @search.pages_for_select  %>
   <br/>
   <%= f.submit "search" %>
 <% end %>
+
+<hr/>
+
+<p id="notice"><%= notice %></p>
+<h1>Listing Users</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>First name</th>
+      <th>String</th>
+      <th>Last name</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.address_id %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
+
