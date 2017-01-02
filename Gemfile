@@ -46,3 +46,4 @@ group :development do
 end
 
 gem 'rails-simple-search', '~>1.1.0'
+gem 'will_paginate'
