@@ -4,9 +4,8 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @search = Search.new(:user, params[:search], :per_page => 2)
-    @search.order = 'last_name'
-    @users = @search.run
+    @search = Search.new(:user, params[:search], :exact_match => ["first_name"])
+    @users = @search.run.order("first_name desc")
 
     respond_to do |format|
       format.html # index.html.erb

@@ -21,9 +21,6 @@
   <%= f.label "Comment" %>
   <%= f.text_field 'comments.body' %>
   <br/>
-  <%= f.label "Page" %>
-  <%= f.select 'page', @search.pages_for_select  %>
-  <br/>
   <%= f.submit "search" %>
 <% end %>
 
