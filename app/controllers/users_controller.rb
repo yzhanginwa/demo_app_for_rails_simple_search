@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+debugger
     @search = Search.new(:user, params[:search], :exact_match => ["first_name"])
     @users = @search.run.order("first_name").paginate(per_page: 2, page: params[:page])
 
@@ -75,6 +76,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :first_name, :string, :last_name, :address_id)
+      params.require(:user).permit(:email, :first_name, :string, :last_name, :age, :address_id)
     end
 end
