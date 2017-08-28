@@ -1,5 +1,5 @@
 class Address < ActiveRecord::Base
-  has_one :user
+  belongs_to :addressable, polymorphic: true 
 
   def full_address
     "#{self.address} #{self.city} #{self.state} #{self.zip}"

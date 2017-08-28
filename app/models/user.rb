@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  belongs_to :address
+  has_one :address, as: :addressable
   has_many :posts
   has_many :comments
 

@@ -31,6 +31,11 @@
     <%= f.label :zip %><br>
     <%= f.text_field :zip %>
   </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.hidden_field :addressable_type, value: 'User' %>
+    <%= f.select :addressable_id, User.all.map{|u| [u.name, u.id]} %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
