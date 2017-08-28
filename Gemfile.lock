@@ -99,7 +99,7 @@ GEM
       nokogiri (~> 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    rails-simple-search (1.1.4)
+    rails-simple-search (1.1.6)
     railties (5.0.1)
       actionpack (= 5.0.1)
       activesupport (= 5.0.1)
@@ -157,7 +157,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   rails (= 5.0.1)
-  rails-simple-search (~> 1.1.4)
+  rails-simple-search (~> 1.1.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
