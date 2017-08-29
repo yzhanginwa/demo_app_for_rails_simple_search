@@ -45,5 +45,5 @@ group :development do
   gem 'spring'
 end
 
-gem 'rails-simple-search', '~>1.1.6'
+gem 'rails-simple-search', '~>1.1.7'
 gem 'will_paginate'
