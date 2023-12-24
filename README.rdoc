@@ -1,4 +1,5 @@
 = Demo application for rails-simple-search
+(Note: for Rails 7 or above projects, please reference rails-simple-search demo at here: https://github.com/yzhanginwa/rails_simple_search_demo)
 
 This is a rails application. Its purpose is to demo the simplicity and power of gem rails-simple-search.
 
